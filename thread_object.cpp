@@ -15,5 +15,8 @@ void Thread_object::get_limit(int start, int end)
 void Thread_object::run()
 {
     for(int i = mStart; i <= mEnd; i++)
-        qDebug()  << i ;
+    {
+        // qDebug()  << i ; //std::cout << i << std::endl;
+        emit send_finished(i);
+    }
 }

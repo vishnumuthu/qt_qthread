@@ -15,6 +15,7 @@ find_package(Qt${QT_VERSION_MAJOR} REQUIRED COMPONENTS Core)
 add_executable(thread_test
   main.cpp
   thread_object.h thread_object.cpp
+  thread_call.h thread_call.cpp
 )
 target_link_libraries(thread_test Qt${QT_VERSION_MAJOR}::Core)
 

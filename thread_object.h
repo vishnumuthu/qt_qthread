@@ -3,6 +3,7 @@
 
 #include <QObject>
 #include <QThread>
+#include <iostream>
 
 class Thread_object : public QThread
 {
@@ -13,6 +14,10 @@ public:
     void get_limit(int start, int end);
 
     void run();
+
+signals:
+    void send_finished(int data);
+
 private:
     int mStart, mEnd;
 };
